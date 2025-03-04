@@ -2,8 +2,6 @@ services:
   pinchflat:
     container_name: Pinchflat
     image: ghcr.io/kieraneglin/pinchflat:latest
-    ports:
-      - "8945:8945"
     security_opt:
       - no-new-privileges:false
       - seccomp:unconfined
