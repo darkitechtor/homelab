@@ -1,0 +1,17 @@
+# Untrack all but gitignore itself
+*
+!.gitignore
+
+# Track docker-compose for specific services
+!*/docker-compose.yml
+!Budibase
+!n8n
+!Nginx
+!Pinchflat
+!Postgres
+!Traefik
+
+# Track specific files for Traefik
+!Traefik/config
+!Traefik/config/traefik.yml
+!Traefik/config/dynamic.yml

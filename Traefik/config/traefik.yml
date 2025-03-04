@@ -1,0 +1,24 @@
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false
+  
+api:
+  dashboard: true
+  insecure: true
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+    http:
+      tls: {}
+
+providers:
+  docker:
+    exposedByDefault: false
+  file:
+    filename: "/etc/traefik/dynamic.yml"
+    
+# logs:
+#   level: DEBUG

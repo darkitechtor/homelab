@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: "/etc/traefik/certs/wildcard.crt"
+      keyFile:  "/etc/traefik/certs/wildcard.key"
