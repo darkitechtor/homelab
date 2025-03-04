@@ -8,8 +8,8 @@ services:
       COUCH_DB_URL: http://${COUCH_DB_USER}:${COUCH_DB_PASSWORD}@couchdb-service:5984
       WORKER_URL: http://worker-service:4003
       MINIO_URL: http://minio-service:9000
-      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       INTERNAL_API_KEY: ${INTERNAL_API_KEY}
       BUDIBASE_ENVIRONMENT: ${BUDIBASE_ENVIRONMENT}
       PORT: 4002
@@ -39,8 +39,8 @@ services:
       CLUSTER_PORT: ${MAIN_PORT}
       API_ENCRYPTION_KEY: ${API_ENCRYPTION_KEY}
       JWT_SECRET: ${JWT_SECRET}
-      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       MINIO_URL: http://minio-service:9000
       APPS_URL: http://app-service:4002
       COUCH_DB_USERNAME: ${COUCH_DB_USER}
@@ -58,10 +58,10 @@ services:
     restart: unless-stopped
     image: minio/minio
     volumes:
-      - minio_data:/data
+      - ./minio_data:/data
     environment:
-      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       MINIO_BROWSER: "off"
     command: server /data --console-address ":9001"
     healthcheck:
@@ -98,23 +98,11 @@ services:
       - COUCHDB_USER=${COUCH_DB_USER}
       - TARGETBUILD=docker-compose
     volumes:
-      - couchdb3_data:/opt/couchdb/data
+      - ./couchdb3_data:/opt/couchdb/data
 
   redis-service:
     restart: unless-stopped
     image: redis
     command: redis-server --requirepass "${REDIS_PASSWORD}"
     volumes:
-      - redis_data:/data
-
-volumes:
-  couchdb3_data:
-    driver: local
-  minio_data:
-    driver: local
-  redis_data:
-    driver: local
-
-networks:
-  ngnx_pm_network:
-    external: true
+      - ./redis_data:/data
