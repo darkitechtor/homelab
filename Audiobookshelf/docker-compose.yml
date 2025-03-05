@@ -1,0 +1,16 @@
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    volumes:
+      - ./audiobooks:/audiobooks
+      - ./podcasts:/podcasts
+      - ./config:/config
+      - ./metadata:/metadata
+    environment:
+      - TZ=${TZ}
+    networks:
+      - ngnx_pm_network
+
+networks:
+  ngnx_pm_network:
+    external: true

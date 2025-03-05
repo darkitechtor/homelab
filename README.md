@@ -31,6 +31,7 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 - [n8n](n8n)
 - [Pinchflat](Pinchflat)
 - [Postgres](Postgres)
+- [Audiobookshelf](Audiobookshelf)
 
 ### Not in use at the moment
 
