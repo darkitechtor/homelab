@@ -1,0 +1,19 @@
+services:
+  wallabag:
+    image: wallabag/wallabag:latest
+    container_name: wallabag
+    restart: unless-stopped
+    environment:
+      - SYMFONY__ENV__MAILER_DSN=smtp://127.0.0.1
+      - SYMFONY__ENV__FROM_EMAIL=wallabag@example.com
+      - SYMFONY__ENV__DOMAIN_NAME=${SYMFONY__ENV__DOMAIN_NAME}
+      - SYMFONY__ENV__SERVER_NAME=${SYMFONY__ENV__SERVER_NAME}
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./images:/var/www/wallabag/web/assets/images
+    networks:
+      - ngnx_pm_network
+
+networks:
+  ngnx_pm_network:
+    external: true
