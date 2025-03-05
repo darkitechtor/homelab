@@ -12,6 +12,7 @@
 !Pinchflat
 !Postgres
 !Traefik
+!Audiobookshelf
 
 # Track specific files for Traefik
 !Traefik/config
