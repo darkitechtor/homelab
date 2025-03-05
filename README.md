@@ -22,21 +22,23 @@ Copy etither whole repository or a separate service folder, which contains `dock
 Don't forget to create and populate an `.env` file if you see that any environment variables are mentioned in `docker-compose.yml` (it looks like `${something}`).  
 After copying the files just run `docker-compose up -d` in a directory with `docker-compose.yml` file and let the magic begins.
 
+> ⚠️ All services are configured to run behind [Nginx Proxy](Nginx). Take that into account if you're going to run any of them separately.
+
 ## List of services
 
-- [Nginx Proxy Manager](https://github.com/darkitechtor/homelab/tree/main/Nginx)
-- [Budibase](https://github.com/darkitechtor/homelab/tree/main/Budibase)
-- [n8n](https://github.com/darkitechtor/homelab/tree/main/n8n)
-- [Pinchflat](https://github.com/darkitechtor/homelab/tree/main/Pinchflat)
-- [Postgres](https://github.com/darkitechtor/homelab/tree/main/Postgres)
+- [Nginx Proxy Manager](Nginx)
+- [Budibase](Budibase)
+- [n8n](n8n)
+- [Pinchflat](Pinchflat)
+- [Postgres](Postgres)
 
 ### Not in use at the moment
 
-- [Traefik](https://github.com/darkitechtor/homelab/tree/main/Traefik)
+- [Traefik](Traefik)
 
 ## Contributors
 
-- [darkitechtor](https://github.com/darkitechtor) (me).
+- [darkitechtor](https://github.com/darkitechtor).
 
 ## License
 
@@ -44,11 +46,11 @@ This project is licensed under the MIT License License - see the [LICENSE](LICEN
 
 ## Badges
 
-[![GitHub stars](https://img.shields.io/github/stars/HomeLab)](https://github.com/HomeLab/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/HomeLab)](https://github.com/HomeLab/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/HomeLab)](https://github.com/HomeLab/issues)
-[![GitHub license](https://img.shields.io/github/license/HomeLab)](https://github.com/HomeLab/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/HomeLab)](https://github.com/darkitechtor/HomeLab/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/HomeLab)](https://github.com/darkitechtor/HomeLab/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/HomeLab)](https://github.com/darkitechtor/HomeLab/issues)
+[![GitHub license](https://img.shields.io/github/license/HomeLab)](https://github.com/darkitechtor/HomeLab/blob/master/LICENSE)
 
 ## GitHub Repository
 
-[Link to GitHub repository](https://github.com/HomeLab)
+[Link to GitHub repository](https://github.com/darkitechtor/HomeLab)
