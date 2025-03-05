@@ -1,6 +1,8 @@
-# Untrack all but gitignore itself
+# Untrack everything but the essential files
 *
 !.gitignore
+!README.md
+!LICENSE
 
 # Track docker-compose for specific services
 !*/docker-compose.yml
