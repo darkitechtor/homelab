@@ -18,7 +18,7 @@ Make sure that you already have both **Docker** and **Docker-Compose** installed
 
 ## Usage
 
-Copy etither whole repository or a separate service folder, which contains `docker-compose.yml` file and, optionally, some additional confugiration files.  
+Copy either whole repository or a separate service folder, which contains `docker-compose.yml` file and, optionally, some additional configuration files.  
 Don't forget to create and populate an `.env` file if you see that any environment variables are mentioned in `docker-compose.yml` (it looks like `${something}`).  
 After copying the files just run `docker-compose up -d` in a directory with `docker-compose.yml` file and let the magic begins.
 
@@ -26,17 +26,20 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 
 ## List of services
 
-- [Nginx Proxy Manager](Nginx)
-- [Budibase](Budibase)
-- [n8n](n8n)
-- [Pinchflat](Pinchflat)
-- [Postgres](Postgres)
-- [Audiobookshelf](Audiobookshelf)
-- [Wallabag](Wallabag)
+|Proxy manager name|Is SSL configured properly?|Current state|
+|-|-|-|
+|[Nginx Proxy Manager](Nginx)|✅|In use|
+|[Traefik](Traefik)|⬜️|Not in use|
 
-### Not in use at the moment
-
-- [Traefik](Traefik)
+|Service name|Port|Is `.env` file expected?|Is configured for NPM?|Is configured for Traefik?|
+|-|-|-|-|-|
+|[Budibase](Budibase)|`10000`|✅|✅|⬜️|
+|[n8n](n8n)|`5678`|✅|✅|⬜️|
+|[Pinchflat](Pinchflat)|`8945`|⬜️|✅|⬜️|
+|[Postgres](Postgres)|PostgreSQL: `5432`<br>Adminer: `8080`|✅|✅|⬜️|
+|[Audiobookshelf](Audiobookshelf)|`80`|✅|✅|⬜️|
+|[Wallabag](Wallabag)|`80`|✅|✅|⬜️|
+|[Storyteller](Storyteller)|`8001`|⬜️|✅|⬜️|
 
 ## Contributors
 

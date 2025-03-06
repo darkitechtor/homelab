@@ -1,0 +1,20 @@
+services:
+  web:
+    image: registry.gitlab.com/smoores/storyteller:latest
+    container_name: storyteller
+    volumes:
+      - ./data:/data:rw
+    environment:
+      - STORYTELLER_SECRET_KEY_FILE=/run/secrets/secret_key
+    secrets:
+      - secret_key
+    networks:
+      - ngnx_pm_network
+
+networks:
+  ngnx_pm_network:
+    external: true
+
+secrets:
+  secret_key:
+    file: ./STORYTELLER_SECRET_KEY.txt # put cryptographically secure random string in this file
