@@ -28,20 +28,20 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 
 ## List of services
 
-| Proxy manager name           | Is SSL configured properly? | Current state |
-| ---------------------------- | --------------------------- | ------------- |
-| [Nginx Proxy Manager](Nginx) | <center>✅</center>          | In use        |
-| [Traefik](Traefik)           | <center>⬜️</center>          | Not in use    |
+| Proxy manager name                         | Is SSL configured properly? | Current state |
+| :----------------------------------------- | :-------------------------: | :------------ |
+| [Nginx Proxy Manager](Nginx Proxy Manager) |              ✅              | In use        |
+| [Traefik](Traefik)                         |              ⬜️              | Not in use    |
 
 | Service name                     | Port                                  | Is `.env` file expected? | Is configured for NPM? | Is configured for Traefik? |
-| -------------------------------- | ------------------------------------- | ------------------------ | ---------------------- | -------------------------- |
-| [Budibase](Budibase)             | `10000`                               | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [n8n](n8n)                       | `5678`                                | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [Pinchflat](Pinchflat)           | `8945`                                | <center>⬜️</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [Postgres](Postgres)             | PostgreSQL: `5432`<br>Adminer: `8080` | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [Audiobookshelf](Audiobookshelf) | `80`                                  | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [Wallabag](Wallabag)             | `80`                                  | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
-| [Storyteller](Storyteller)       | `8001`                                | <center>⬜️</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| :------------------------------- | :------------------------------------ | :----------------------: | :--------------------: | :------------------------: |
+| [Budibase](Budibase)             | `10000`                               |            ✅             |           ✅            |             ⬜️              |
+| [n8n](n8n)                       | `5678`                                |            ✅             |           ✅            |             ⬜️              |
+| [Pinchflat](Pinchflat)           | `8945`                                |            ⬜️             |           ✅            |             ⬜️              |
+| [Postgres](Postgres)             | PostgreSQL: `5432`<br>Adminer: `8080` |            ✅             |           ✅            |             ⬜️              |
+| [Audiobookshelf](Audiobookshelf) | `80`                                  |            ✅             |           ✅            |             ⬜️              |
+| [Wallabag](Wallabag)             | `80`                                  |            ✅             |           ✅            |             ⬜️              |
+| [Storyteller](Storyteller)       | `8001`                                |            ⬜️             |           ✅            |             ⬜️              |
 
 ## Contributors
 

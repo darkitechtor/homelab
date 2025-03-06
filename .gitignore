@@ -8,7 +8,7 @@
 !*/docker-compose.yml
 !Budibase
 !n8n
-!Nginx
+!Nginx Proxy Manager
 !Pinchflat
 !Postgres
 !Traefik
