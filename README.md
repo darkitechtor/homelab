@@ -4,13 +4,15 @@ A collection of `docker-compose.yml` files which I have used to setup my homelab
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [List of services](#list-of-services)
-- [Contributors](#contributors)
-- [License](#license)
-- [Badges](#badges)
-- [GitHub Repository](#github-repository)
+- [HomeLab](#homelab)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [List of services](#list-of-services)
+  - [Contributors](#contributors)
+  - [License](#license)
+  - [Badges](#badges)
+  - [GitHub Repository](#github-repository)
 
 ## Installation
 
@@ -22,24 +24,24 @@ Copy either whole repository or a separate service folder, which contains `docke
 Don't forget to create and populate an `.env` file if you see that any environment variables are mentioned in `docker-compose.yml` (it looks like `${something}`).  
 After copying the files just run `docker-compose up -d` in a directory with `docker-compose.yml` file and let the magic begins.
 
-> ⚠️ All services are configured to run behind [Nginx Proxy](Nginx). Take that into account if you're going to run any of them separately.
+> ⚠️ All services are configured to run behind proxy. Take that into account if you're going to run any of them separately.
 
 ## List of services
 
-|Proxy manager name|Is SSL configured properly?|Current state|
-|-|-|-|
-|[Nginx Proxy Manager](Nginx)|✅|In use|
-|[Traefik](Traefik)|⬜️|Not in use|
+| Proxy manager name           | Is SSL configured properly? | Current state |
+| ---------------------------- | --------------------------- | ------------- |
+| [Nginx Proxy Manager](Nginx) | <center>✅</center>          | In use        |
+| [Traefik](Traefik)           | <center>⬜️</center>          | Not in use    |
 
-|Service name|Port|Is `.env` file expected?|Is configured for NPM?|Is configured for Traefik?|
-|-|-|-|-|-|
-|[Budibase](Budibase)|`10000`|✅|✅|⬜️|
-|[n8n](n8n)|`5678`|✅|✅|⬜️|
-|[Pinchflat](Pinchflat)|`8945`|⬜️|✅|⬜️|
-|[Postgres](Postgres)|PostgreSQL: `5432`<br>Adminer: `8080`|✅|✅|⬜️|
-|[Audiobookshelf](Audiobookshelf)|`80`|✅|✅|⬜️|
-|[Wallabag](Wallabag)|`80`|✅|✅|⬜️|
-|[Storyteller](Storyteller)|`8001`|⬜️|✅|⬜️|
+| Service name                     | Port                                  | Is `.env` file expected? | Is configured for NPM? | Is configured for Traefik? |
+| -------------------------------- | ------------------------------------- | ------------------------ | ---------------------- | -------------------------- |
+| [Budibase](Budibase)             | `10000`                               | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [n8n](n8n)                       | `5678`                                | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [Pinchflat](Pinchflat)           | `8945`                                | <center>⬜️</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [Postgres](Postgres)             | PostgreSQL: `5432`<br>Adminer: `8080` | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [Audiobookshelf](Audiobookshelf) | `80`                                  | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [Wallabag](Wallabag)             | `80`                                  | <center>✅</center>       | <center>✅</center>     | <center>⬜️</center>         |
+| [Storyteller](Storyteller)       | `8001`                                | <center>⬜️</center>       | <center>✅</center>     | <center>⬜️</center>         |
 
 ## Contributors
 
