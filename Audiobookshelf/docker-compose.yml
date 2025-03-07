@@ -1,6 +1,8 @@
 services:
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:latest
+    container_name: audiobookshelf
+    restart: unless-stopped
     volumes:
       - ./audiobooks:/audiobooks
       - ./podcasts:/podcasts

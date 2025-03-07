@@ -2,6 +2,7 @@ services:
   web:
     image: registry.gitlab.com/smoores/storyteller:latest
     container_name: storyteller
+    restart: unless-stopped
     volumes:
       - ./data:/data:rw
     environment:
