@@ -28,10 +28,10 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 
 ## List of services
 
-| Proxy manager name                         | Is SSL configured properly? | Current state |
-| :----------------------------------------- | :-------------------------: | :------------ |
-| [Nginx Proxy Manager](Nginx Proxy Manager) |              ✅              | In use        |
-| [Traefik](Traefik)                         |              ⬜️              | Not in use    |
+| Proxy manager name                           | Is SSL configured properly? | Current state |
+| :------------------------------------------- | :-------------------------: | :------------ |
+| [Nginx Proxy Manager](<Nginx Proxy Manager>) |              ✅              | In use        |
+| [Traefik](Traefik)                           |              ⬜️              | Not in use    |
 
 | Service name                     | Port                                  | Is `.env` file expected? | Is configured for NPM? | Is configured for Traefik? |
 | :------------------------------- | :------------------------------------ | :----------------------: | :--------------------: | :------------------------: |
