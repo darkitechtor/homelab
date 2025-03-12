@@ -9,7 +9,7 @@ services:
       - SYMFONY__ENV__DOMAIN_NAME=${SYMFONY__ENV__DOMAIN_NAME}
       - SYMFONY__ENV__SERVER_NAME=${SYMFONY__ENV__SERVER_NAME}
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data:/var/www/wallabag/data
       - ./images:/var/www/wallabag/web/assets/images
     networks:
       - ngnx_pm_network
