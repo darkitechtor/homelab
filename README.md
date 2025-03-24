@@ -42,6 +42,7 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 | [Audiobookshelf](Audiobookshelf) | `80`                                  |            ✅             |           ✅            |             ⬜️              |
 | [Wallabag](Wallabag)             | `80`                                  |            ✅             |           ✅            |             ⬜️              |
 | [Storyteller](Storyteller)       | `8001`                                |            ⬜️             |           ✅            |             ⬜️              |
+| [Sabnzbd](Sabnzbd)               | `8080`                                |            ✅             |           ✅            |             ⬜️              |
 
 ## Contributors
 
