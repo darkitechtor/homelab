@@ -15,8 +15,12 @@
 !Audiobookshelf
 !Wallabag
 !Storyteller
+!Sabnzbd
 
 # Track specific files for Traefik
 !Traefik/config
 !Traefik/config/traefik.yml
 !Traefik/config/dynamic.yml
+
+# Track specific files for Sabnzbd
+!Sabnzbd/Additional\ steps.md

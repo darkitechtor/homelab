@@ -1,0 +1,19 @@
+services:
+  sabnzbd:
+    image: linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+      - ./incomplete-downloads:/incomplete-downloads
+    networks:
+      - ngnx_pm_network
+
+networks:
+  ngnx_pm_network:
+    external: true
