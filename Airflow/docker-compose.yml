@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: airflow_pg
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
+      - POSTGRES_DB
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    networks:
+      - ngnx_pm_network
+
+  airflow:
+    build: .
+    environment:
+      - AIRFLOW_USERNAME
+      - AIRFLOW_FIRSTNAME
+      - AIRFLOW_LASTNAME
+      - AIRFLOW_EMAIL
+      - AIRFLOW_PASSWORD
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@airflow_pg:${POSTGRES_PORT}/${POSTGRES_DB}
+    command: bash -c "/project/scripts/init.sh"
+    container_name: airflow
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./airflow/plugins:/root/airflow/plugins
+      - ./logs:/usr/local/airflow/logs
+    networks:
+      - ngnx_pm_network
+
+networks:
+  ngnx_pm_network:
+    external: true

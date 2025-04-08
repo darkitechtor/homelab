@@ -6,21 +6,27 @@
 
 # Track docker-compose for specific services
 !*/docker-compose.yml
+!Airflow
+!Audiobookshelf
 !Budibase
 !n8n
 !Nginx Proxy Manager
 !Pinchflat
 !Postgres
-!Traefik
-!Audiobookshelf
-!Wallabag
-!Storyteller
 !Sabnzbd
+!Storyteller
+!Traefik
+!Wallabag
+
+# Track specific files for Airflow
+!Airflow/Dockerfile
+!Airflow/scripts
+!Airflow/scripts/init.sh
+
+# Track specific files for Sabnzbd
+!Sabnzbd/Additional\ steps.md
 
 # Track specific files for Traefik
 !Traefik/config
 !Traefik/config/traefik.yml
 !Traefik/config/dynamic.yml
-
-# Track specific files for Sabnzbd
-!Sabnzbd/Additional\ steps.md
