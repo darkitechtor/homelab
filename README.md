@@ -35,14 +35,15 @@ After copying the files just run `docker-compose up -d` in a directory with `doc
 
 | Service name                     | Port                                  | Is `.env` file expected? | Is configured for NPM? | Is configured for Traefik? |
 | :------------------------------- | :------------------------------------ | :----------------------: | :--------------------: | :------------------------: |
+| [Airflow](Airflow)               | `8080`                                |            ✅             |           ✅            |             ⬜️              |
+| [Audiobookshelf](Audiobookshelf) | `80`                                  |            ✅             |           ✅            |             ⬜️              |
 | [Budibase](Budibase)             | `10000`                               |            ✅             |           ✅            |             ⬜️              |
 | [n8n](n8n)                       | `5678`                                |            ✅             |           ✅            |             ⬜️              |
 | [Pinchflat](Pinchflat)           | `8945`                                |            ⬜️             |           ✅            |             ⬜️              |
 | [Postgres](Postgres)             | PostgreSQL: `5432`<br>Adminer: `8080` |            ✅             |           ✅            |             ⬜️              |
-| [Audiobookshelf](Audiobookshelf) | `80`                                  |            ✅             |           ✅            |             ⬜️              |
-| [Wallabag](Wallabag)             | `80`                                  |            ✅             |           ✅            |             ⬜️              |
-| [Storyteller](Storyteller)       | `8001`                                |            ⬜️             |           ✅            |             ⬜️              |
 | [Sabnzbd](Sabnzbd)               | `8080`                                |            ✅             |           ✅            |             ⬜️              |
+| [Storyteller](Storyteller)       | `8001`                                |            ⬜️             |           ✅            |             ⬜️              |
+| [Wallabag](Wallabag)             | `80`                                  |            ✅             |           ✅            |             ⬜️              |
 
 ## Contributors
 
